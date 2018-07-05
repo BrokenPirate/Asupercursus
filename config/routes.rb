@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   get "/team" => "pages#team"
   get "/contact" => "pages#join_us"
+
+
   get "/courses" => "courses#index"
   get "/courses/:id" => "courses#show"
+
+  resources :courses
 
 
 
