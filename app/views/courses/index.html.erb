@@ -1,0 +1,9 @@
+<h1 class="text-center">All courses</h1>
+
+<ul>
+	<% @courses.each do |course| %>
+		<li> 
+			<%= course.name %> (<%= course.url %>)
+		</li>
+	<% end %>
+</ul>
