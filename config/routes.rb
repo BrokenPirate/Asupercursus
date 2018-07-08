@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/courses/new" => "courses#new"
   get "/courses/:id" => "courses#show"
 
+
   resources :courses
 
 

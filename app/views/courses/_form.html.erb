@@ -1,0 +1,6 @@
+<%= simple_form_for @course do |f| %>
+	<%= f.input :name, placeholder: "Course name" %>
+	<%= f.input :tagline, placeholder: "Course tagline"  %>
+	<%= f.input :url, placeholder: "URL" %>
+	<%= f.button :submit, "Lister le cours", class: "btn btn-primary" %>
+	<% end %>
