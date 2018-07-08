@@ -1,20 +1,63 @@
-<h1 class="text-center">All courses</h1>
 
+<div class="container">
+	<div class="row">
+		<div class="div.col-xs-12-col-sm-10.col-sm-offset-1">
+			<h1 class="text-center">All courses</h1>
 
-</p>
-</p>
+			<% @courses.each do |course|  %>
 
-<ul class="text-center">
-	<% @courses.each do |course| %>
-		<li> 
 			
-			<%= link_to course.name, course_path(course) %> - <%= course.tagline %>
-			
-		</li>
+
+			<div class="course">
+  <div class='course-upvote'>
+    <div class="course-arrow"></div>
+    <div class='course-count'>95</div>
+  </div>
+  <img src="http://unsplash.it/200/150">
+  <div class='course-body'>
+    <h3> <%= course.name %> </h3>
+    <p> <%= course.tagline %> </p>
+  </div>
+
+
+  <ul class="list-inline course-controls"> 
+   
+
+    <li>
+    	   <%= link_to course_path(course) do %>
+    	 <i class="fa fa-eye"></i>
+    	   <%end%>
+    </li>   	   
+    <li>
+    		<%= link_to edit_course_path(course) do %>
+
+    		<i class="fa fa-pencil-alt"></i>
+
+    		<% end %>
+    </li>  		
+ 	<li>
+    		<%= link_to course_path(course), method: :delete do %>
+    		<i class="fa fa-trash"></i>
+    		<% end %>
+    </li>
+    		
+     <li>
+			<%=link_to course_path(course) do %>
+    	    <i class="fa fa-heart"></i>
+    	    <%end%>
+    </li>
+  </ul>
+</div>
+
 	<% end %>
-</ul>
 
-<p class="text-center">
-	<%= link_to "Home", root_path, class: "btn btn-primary" %>
-<p class="text-center">
-	<%= link_to "List a course", new_course_path, class: "btn btn-success" %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

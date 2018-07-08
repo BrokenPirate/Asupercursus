@@ -1,17 +1,23 @@
-<div class="container text-center">
-	<h1>Supercursus</h1>
-	<p>Find best courses</p>
-
-<p>
-
-We have <strong> a lot of new courses </strong> today - <%= @today %>  
-
-We are making a website that will contain the one you need! 
 
 
-</p>
 
-<%= link_to "All courses", courses_path , class: "btn btn-success" %>
+ 
 
 
+
+
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("<%= image_path '/assets/images/success.jgp' %>");">
+
+  <div class="banner-content">
+    <h1>Supercursus</h1>
+    <p>Find best courses</p>
+    <%= link_to "Browse Courses", courses_path, class:"btn btn-primary btn-lg" %>
+  
+  </div>
 </div>
+
+
+
+
+
+
