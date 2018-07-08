@@ -1,9 +1,19 @@
 <h1 class="text-center">All courses</h1>
 
-<ul>
+
+</p>
+</p>
+
+<ul class="text-center">
 	<% @courses.each do |course| %>
 		<li> 
-			<%= course.name %> (<%= course.url %>)
+			
+			<%= link_to course.name, course_path(course) %>
 		</li>
 	<% end %>
 </ul>
+
+<p class="text-center">
+	<%= link_to "Home", root_path, class: "btn btn-primary" %>
+<p class="text-center">
+	<%= link_to "List a course", new_course_path, class: "btn btn-success" %>
