@@ -2,7 +2,8 @@
   color: white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+
+ 
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -10,6 +11,7 @@
 }
 .banner h1 {
   font-size: 50px;
+  font-color: white;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
@@ -20,3 +22,5 @@
   opacity: 0.6;
   margin-bottom: 30px;
 }
+
+ /* if you have a 70px navbar => height: calc(100vh - 70px); */

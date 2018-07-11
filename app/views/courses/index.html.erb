@@ -13,9 +13,9 @@
     <div class="course-arrow"></div>
     <div class='course-count'>95</div>
   </div>
-  <img src="http://unsplash.it/200/150">
+  <img src="http://unsplash.it/200/150" class="course-image">
   <div class='course-body'>
-    <h3> <%= course.name %> </h3>
+    <h3> <%= link_to course.name, course_path(course) %> </h3>
     <p> <%= course.tagline %> </p>
   </div>
 

@@ -4,11 +4,15 @@ class CoursesController < ApplicationController
   before_action :find_course, only: [:show, :edit, :update, :destroy]
 
     def course_params
-		params.require(:course).permit(:name, :url, :tagline)
+		params.require(:course).permit(:name, :url, :tagline, :category)
 	end
 
 	def index
+		if params[:category]
+			@courses = Course.where(category: params[:category])
+		else
 		@courses = Course.all
+	end
 	end
 	def show
 		
